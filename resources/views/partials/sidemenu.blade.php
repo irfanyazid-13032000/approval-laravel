@@ -15,13 +15,7 @@
     <div class="menu-inner-shadow"></div>
 
     <ul class="menu-inner py-1">
-        <!-- Dashboard -->
-        <li class="menu-item @if (request()->is('/')) active @endif">
-            <a href="/" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Dashboard</div>
-            </a>
-        </li>
+       
 
         <!-- Layouts -->
         @if (Auth::user()->role === 'Admin' || Auth::user()->role === 'HRD')
@@ -29,7 +23,7 @@
                 class="menu-item {{ Route::is('users.*') || Route::is('divisi.*') || Route::is('rekap.*') || Route::is('intern.*') || Route::is('role.*') ? 'active open' : '' }}">
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
                     <i class="menu-icon tf-icons bx bxs-user-check"></i>
-                    <div data-i18n="Layouts">Management </div>
+                    <div>Management </div>
                 </a>
 
                 <ul class="menu-sub">
@@ -52,21 +46,13 @@
                             </a>
                         </li>
                     @elseif (Auth::user()->role === 'HRD')
-                        <li class="menu-item {{ Route::is('intern.*') ? 'active' : '' }}">
-                            <a href="{{ route('intern.index') }}" class="menu-link active ">
-                                <div>Data Anggota Magang</div>
-                            </a>
-                        </li>
+                       
                         <li class="menu-item {{ Route::is('divisi.*') ? 'active' : '' }}">
                             <a href="{{ route('divisi.index') }}" class="menu-link">
                                 <div>Master Divisi</div>
                             </a>
                         </li>
-                        <li class="menu-item {{ Route::is('rekap.*') ? 'active' : '' }}">
-                            <a href="{{ route('rekap.absensi') }}" class="menu-link">
-                                <div>Rekap Absensi</div>
-                            </a>
-                        </li>
+                       
                         <li class="menu-item {{ Route::is('approval.*') ? 'active' : '' }}">
                             <a href="{{ route('approval.index') }}" class="menu-link">
                                 <div>Approval</div>

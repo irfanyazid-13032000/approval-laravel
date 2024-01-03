@@ -10,8 +10,9 @@
 
         <span class="login100-form-title p-b-34 p-t-27">
             Masukkan Akun Anda
-            (email : admin@gmail.com, password : admin123)
         </span>
+        
+        <p style="text-align:center;color:white;">(email : admin@gmail.com, password : admin123)</p>
 
         <div class="wrap-input100 validate-input" data-validate="Enter email">
             <input class="input100" type="text" name="email" placeholder="Email Anda">
