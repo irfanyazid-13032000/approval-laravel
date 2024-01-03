@@ -21,7 +21,6 @@
                         <th>Nama</th>
                         <th>Email</th>
                         <th>Posisi</th>
-                        <th>Status</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -32,11 +31,6 @@
                             <td>{{ $items->name }}</td>
                             <td>{{ $items->email }}</td>
                             <td>{{ $items->role }}</td>
-                            @if ($items->status == 'Aktif')
-                                <td><span class="badge bg-label-success me-1">{{ $items->status }}</span></td>
-                            @else
-                                <td><span class="badge bg-label-danger me-1">{{ $items->status }}</span></td>
-                            @endif
                             <td>
                                 <div class="dropdown">
                                     <button type="button" class="btn p-0 dropdown-toggle hide-arrow"

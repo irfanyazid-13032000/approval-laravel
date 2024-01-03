@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('history_approval', function (Blueprint $table) {
             $table->id();
-            $table->string('approval_id');
-            $table->string('actor');
+            $table->integer('user_id');
+            $table->string('jabatan_kerja');
             $table->string('status');
             $table->string('comment');
             $table->rememberToken();

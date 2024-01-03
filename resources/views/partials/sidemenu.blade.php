@@ -87,28 +87,7 @@
                 </ul>
             </li>
         @endif
-        <!-- / Kegiatan -->
-        <li class="menu-item {{ Route::is('absensi.*') || Route::is('sertifikat.*') ? 'active open' : '' }}">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bxs-user-badge"></i>
-                <div data-i18n="Layouts">Activity</div>
-            </a>
-
-            <ul class="menu-sub">
-
-                <li class="menu-item {{ Route::is('absensi.*') ? 'active' : '' }}">
-                    <a href="{{ route('absensi.show', Auth::user()->email) }}" class="menu-link">
-                        <div>Absensi</div>
-                    </a>
-                </li>
-                <li class="menu-item {{ Route::is('sertifikat.*') ? 'active' : '' }}">
-                    <a href="{{ route('sertifikat.show', Auth::user()->email) }}" class="menu-link">
-                        <div>Cetak Sertifikat </div>
-                    </a>
-                </li>
-
-            </ul>
-        </li>
+       
 
     </ul>
 </aside>

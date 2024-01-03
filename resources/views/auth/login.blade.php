@@ -10,10 +10,12 @@
 
         <span class="login100-form-title p-b-34 p-t-27">
             Masukkan Akun Anda
+            (email : admin@gmail.com, password : admin123)
         </span>
 
         <div class="wrap-input100 validate-input" data-validate="Enter email">
             <input class="input100" type="text" name="email" placeholder="Email Anda">
+            <p></p>
             <span class="focus-input100" data-placeholder="&#xf207;"></span>
         </div>
 
